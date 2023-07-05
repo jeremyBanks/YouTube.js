@@ -7,6 +7,7 @@ import { InnertubeError } from '../../utils/Utils.js';
 import type Format from '../../parser/classes/misc/Format.js';
 import type { INextResponse, IPlayerResponse } from '../../parser/index.js';
 import Parser from '../../parser/index.js';
+import { toDash } from '../../utils/DashManifest.js';
 
 export default class MediaInfo {
   #page: [IPlayerResponse, INextResponse?];
@@ -39,8 +40,8 @@ export default class MediaInfo {
    * @param format_filter - Function to filter the formats.
    * @returns DASH manifest
    */
-  async toDash(url_transformer?: URLTransformer, format_filter?: FormatFilter): Promise<string> {
-    return FormatUtils.toDash(this.streaming_data, url_transformer, format_filter, this.#cpn, this.#actions.session.player, this.#actions);
+  toDash(url_transformer?: URLTransformer, format_filter?: FormatFilter): Promise<string> {
+    return toDash(this.streaming_data, url_transformer, format_filter, this.#cpn, this.#actions.session.player, this.#actions);
   }
 
   /**

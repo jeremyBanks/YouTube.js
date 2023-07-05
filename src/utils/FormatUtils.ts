@@ -146,7 +146,6 @@ class FormatUtils {
             chunk_end += chunk_size;
 
             resolve();
-            return;
           } catch (e: any) {
             reject(e);
           }
