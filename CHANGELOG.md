@@ -1,5 +1,25 @@
 # Changelog
 
+## [5.9.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.8.0...v5.9.0) (2023-08-16)
+
+
+### Features
+
+* **VideoInfo:** support iOS client ([#467](https://github.com/jeremyBanks/YouTube.js/issues/467)) ([46fe18b](https://github.com/jeremyBanks/YouTube.js/commit/46fe18b763e0c943b24ea10fdf25456ab9ade709))
+
+
+### Bug Fixes
+
+* **Format:** Extracting audio language from captions ([#470](https://github.com/jeremyBanks/YouTube.js/issues/470)) ([31d27b1](https://github.com/jeremyBanks/YouTube.js/commit/31d27b1bca489ee0053d2783f1a956609845a901))
+* **parser:** Allow any property in the `RawResponse` interface ([3bc53a8](https://github.com/jeremyBanks/YouTube.js/commit/3bc53a8c12e65b22f19a3e337641196b692a94db))
+* **Playlist:** Only try extracting the subtitle for the first page ([#465](https://github.com/jeremyBanks/YouTube.js/issues/465)) ([e370116](https://github.com/jeremyBanks/YouTube.js/commit/e3701160928e9e959b88ca215c6b0a44c70ca6e6))
+* **toDash:** Format grouping into AdaptationSets ([#462](https://github.com/jeremyBanks/YouTube.js/issues/462)) ([1ff3e1a](https://github.com/jeremyBanks/YouTube.js/commit/1ff3e1a440389e71055d4b201c29021ca5b39254))
+
+
+### Performance Improvements
+
+* Cleanup some unnecessary uses of `YTNode#key` and `Maybe` ([#463](https://github.com/jeremyBanks/YouTube.js/issues/463)) ([0dda97e](https://github.com/jeremyBanks/YouTube.js/commit/0dda97e0b03171de52d7f11a5abf78911e74cead))
+
 ## [5.8.0](https://github.com/LuanRT/YouTube.js/compare/v5.7.1...v5.8.0) (2023-07-30)
 
 
