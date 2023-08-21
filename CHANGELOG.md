@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.11.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.10.0...v5.11.0) (2023-08-21)
+
+
+### Features
+
+* fix? ([23cb7d6](https://github.com/jeremyBanks/YouTube.js/commit/23cb7d6a4b48d588249d4a60ad324228fb4493e8))
+
 ## [5.10.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.9.0...v5.10.0) (2023-08-21)
 
 
