@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.10.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.9.0...v5.10.0) (2023-08-21)
+
+
+### Features
+
+* add support for onBehalfOfUser ([18bdf11](https://github.com/jeremyBanks/YouTube.js/commit/18bdf11428be8dcdb3d55a49e8a4dbd635363173))
+
 ## [5.9.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.8.0...v5.9.0) (2023-08-16)
 
 
