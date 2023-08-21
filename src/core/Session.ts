@@ -346,7 +346,7 @@ export default class Session extends EventEmitterLike {
       },
       user: {
         enableSafetyMode: options.enable_safety_mode,
-        lockedSafetyMode: false
+        lockedSafetyMode: false,
         onBehalfOfUser: options.on_behalf_of_user,
       }
     };
