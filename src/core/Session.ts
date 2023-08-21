@@ -238,6 +238,7 @@ export default class Session extends EventEmitterLike {
     client_name: string;
     enable_safety_mode: boolean;
     visitor_data: string;
+    on_behalf_of_user?: string;
   }, fetch: FetchFunction = Platform.shim.fetch): Promise<SessionData> {
     const url = new URL('/sw.js_data', Constants.URLS.YT_BASE);
 
@@ -298,7 +299,7 @@ export default class Session extends EventEmitterLike {
       user: {
         enableSafetyMode: options.enable_safety_mode,
         lockedSafetyMode: false,
-        onBehalfOfUser: options.onBehalfOfUser,
+        onBehalfOfUser: options.on_behalf_of_user
       }
     };
 
@@ -313,7 +314,7 @@ export default class Session extends EventEmitterLike {
     client_name: string;
     enable_safety_mode: boolean;
     visitor_data: string;
-    on_behalf?: string;
+    on_behalf_of_user?: string;
   }): SessionData {
     let visitor_id = generateRandomString(11);
 
@@ -347,7 +348,7 @@ export default class Session extends EventEmitterLike {
       user: {
         enableSafetyMode: options.enable_safety_mode,
         lockedSafetyMode: false,
-        onBehalfOfUser: options.on_behalf_of_user,
+        onBehalfOfUser: options.on_behalf_of_user
       }
     };
 
