@@ -197,7 +197,8 @@ export default class Session extends EventEmitterLike {
       options.device_category,
       options.client_type,
       options.timezone,
-      options.fetch
+      options.fetch,
+      options.on_behalf_of_user
     );
 
     return new Session(
@@ -217,14 +218,15 @@ export default class Session extends EventEmitterLike {
     device_category: DeviceCategory = 'desktop',
     client_name: ClientType = ClientType.WEB,
     tz: string = Intl.DateTimeFormat().resolvedOptions().timeZone,
-    fetch: FetchFunction = Platform.shim.fetch
+    fetch: FetchFunction = Platform.shim.fetch,
+    on_behalf_of_user?: string
   ) {
     let session_data: SessionData;
 
     if (generate_session_locally) {
-      session_data = this.#generateSessionData({ lang, location, time_zone: tz, device_category, client_name, enable_safety_mode, visitor_data });
+      session_data = this.#generateSessionData({ lang, location, time_zone: tz, device_category, client_name, enable_safety_mode, visitor_data, on_behalf_of_user });
     } else {
-      session_data = await this.#retrieveSessionData({ lang, location, time_zone: tz, device_category, client_name, enable_safety_mode, visitor_data }, fetch);
+      session_data = await this.#retrieveSessionData({ lang, location, time_zone: tz, device_category, client_name, enable_safety_mode, visitor_data, on_behalf_of_user }, fetch);
     }
 
     return { ...session_data, account_index };
