@@ -62,6 +62,7 @@ export interface Context {
   user: {
     enableSafetyMode: boolean;
     lockedSafetyMode: boolean;
+    onBehalfOfUser?: string;
   };
   thirdParty?: {
     embedUrl: string;
