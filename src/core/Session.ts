@@ -85,6 +85,10 @@ export interface SessionOptions {
    */
   account_index?: number;
   /**
+   * The channel to operate as, if multiple are associated with the logged-in account.
+   */
+  on_behalf_of_user?: string;
+  /**
    * Specifies whether to retrieve the JS player. Disabling this will make session creation faster.
    * **NOTE:** Deciphering formats is not possible without the JS player.
    */
@@ -293,7 +297,8 @@ export default class Session extends EventEmitterLike {
       },
       user: {
         enableSafetyMode: options.enable_safety_mode,
-        lockedSafetyMode: false
+        lockedSafetyMode: false,
+        onBehalfOfUser: options.onBehalfOfUser,
       }
     };
 
@@ -308,6 +313,7 @@ export default class Session extends EventEmitterLike {
     client_name: string;
     enable_safety_mode: boolean;
     visitor_data: string;
+    on_behalf?: string;
   }): SessionData {
     let visitor_id = generateRandomString(11);
 
@@ -341,6 +347,7 @@ export default class Session extends EventEmitterLike {
       user: {
         enableSafetyMode: options.enable_safety_mode,
         lockedSafetyMode: false
+        onBehalfOfUser: options.on_behalf_of_user,
       }
     };
 
