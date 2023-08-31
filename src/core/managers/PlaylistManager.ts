@@ -200,4 +200,23 @@ export default class PlaylistManager {
       action_result: response.data.actions // TODO: implement actions in the parser
     };
   }
+
+  /**
+   * Sets the description for the given playlist.
+   * @param playlist_id - The playlist ID.
+   * @param description - The description text.
+   */
+  async setDescription(playlist_id: string, description: string): Promise<unknown> {
+    const payload: EditPlaylistEndpointOptions = { playlist_id, actions: [] };
+
+    payload.actions.push({
+      action: 'ACTION_SET_PLAYLIST_DESCRIPTION',
+      playlist_description: description
+    });
+
+    return {
+      playlist_id,
+      action_result: response.data.actions
+    };
+  }
 }
