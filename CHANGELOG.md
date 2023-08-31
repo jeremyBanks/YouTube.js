@@ -1,38 +1,72 @@
 # Changelog
 
-## [5.11.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.10.0...v5.11.0) (2023-08-21)
+## [6.2.0](https://github.com/LuanRT/YouTube.js/compare/v6.1.0...v6.2.0) (2023-08-29)
 
 
 ### Features
 
-* fix? ([23cb7d6](https://github.com/jeremyBanks/YouTube.js/commit/23cb7d6a4b48d588249d4a60ad324228fb4493e8))
-
-## [5.10.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.9.0...v5.10.0) (2023-08-21)
-
-
-### Features
-
-* add support for onBehalfOfUser ([18bdf11](https://github.com/jeremyBanks/YouTube.js/commit/18bdf11428be8dcdb3d55a49e8a4dbd635363173))
-
-## [5.9.0](https://github.com/jeremyBanks/YouTube.js/compare/v5.8.0...v5.9.0) (2023-08-16)
-
-
-### Features
-
-* **VideoInfo:** support iOS client ([#467](https://github.com/jeremyBanks/YouTube.js/issues/467)) ([46fe18b](https://github.com/jeremyBanks/YouTube.js/commit/46fe18b763e0c943b24ea10fdf25456ab9ade709))
+* **Session:** Add fallback for session data retrieval ([#490](https://github.com/LuanRT/YouTube.js/issues/490)) ([10c15bf](https://github.com/LuanRT/YouTube.js/commit/10c15bfb9f131a2acea2f26ff3328993d8d8f4aa))
 
 
 ### Bug Fixes
 
-* **Format:** Extracting audio language from captions ([#470](https://github.com/jeremyBanks/YouTube.js/issues/470)) ([31d27b1](https://github.com/jeremyBanks/YouTube.js/commit/31d27b1bca489ee0053d2783f1a956609845a901))
-* **parser:** Allow any property in the `RawResponse` interface ([3bc53a8](https://github.com/jeremyBanks/YouTube.js/commit/3bc53a8c12e65b22f19a3e337641196b692a94db))
-* **Playlist:** Only try extracting the subtitle for the first page ([#465](https://github.com/jeremyBanks/YouTube.js/issues/465)) ([e370116](https://github.com/jeremyBanks/YouTube.js/commit/e3701160928e9e959b88ca215c6b0a44c70ca6e6))
-* **toDash:** Format grouping into AdaptationSets ([#462](https://github.com/jeremyBanks/YouTube.js/issues/462)) ([1ff3e1a](https://github.com/jeremyBanks/YouTube.js/commit/1ff3e1a440389e71055d4b201c29021ca5b39254))
+* **Format:** Fix `is_original` always being `true` ([#492](https://github.com/LuanRT/YouTube.js/issues/492)) ([0412fa0](https://github.com/LuanRT/YouTube.js/commit/0412fa05ff1f00960b398c2f18d5ce39ce0cb864))
+
+## [6.1.0](https://github.com/LuanRT/YouTube.js/compare/v6.0.2...v6.1.0) (2023-08-27)
+
+
+### Features
+
+* **parser:** Add `AlertWithButton` ([#486](https://github.com/LuanRT/YouTube.js/issues/486)) ([8b69587](https://github.com/LuanRT/YouTube.js/commit/8b6958778721ba274283f641779fb60bc6f42cd2))
+* **parser:** Add `ChannelHeaderLinksView` ([#484](https://github.com/LuanRT/YouTube.js/issues/484)) ([ed7be2a](https://github.com/LuanRT/YouTube.js/commit/ed7be2a675cf1ec663e743e90db6260c97546739))
+* **parser:** Add `CompactMovie` ([#487](https://github.com/LuanRT/YouTube.js/issues/487)) ([2eed172](https://github.com/LuanRT/YouTube.js/commit/2eed1726d5bde7648af09273cc14ab4a315cb23e))
+
+## [6.0.2](https://github.com/LuanRT/YouTube.js/compare/v6.0.1...v6.0.2) (2023-08-24)
+
+
+### Bug Fixes
+
+* invalid set ids in dash manifest ([#480](https://github.com/LuanRT/YouTube.js/issues/480)) ([1c3ea2a](https://github.com/LuanRT/YouTube.js/commit/1c3ea2acd38652c6b40a0817a7836c672a776c4e))
+
+## [6.0.1](https://github.com/LuanRT/YouTube.js/compare/v6.0.0...v6.0.1) (2023-08-22)
+
+
+### Bug Fixes
+
+* **SearchSubMenu:** Groups not being parsed due to a typo ([90be877](https://github.com/LuanRT/YouTube.js/commit/90be877d28e0ef013056eaeaa4f2765c91addd61))
+
+## [6.0.0](https://github.com/LuanRT/YouTube.js/compare/v5.8.0...v6.0.0) (2023-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace unnecessary classes with pure functions ([#468](https://github.com/LuanRT/YouTube.js/issues/468))
+
+### Features
+
+* **MusicResponsiveListItem:** Detect non music tracks properly ([815e54b](https://github.com/LuanRT/YouTube.js/commit/815e54b854fcda3f5423231c8495ce1fb69d8237))
+* **parser:** add `MusicMultiRowListItem` ([494ee87](https://github.com/LuanRT/YouTube.js/commit/494ee8776af0839d3ee2cca3d2fd836680cfdb9e))
+* **Session:** Add `IOS` to `ClientType` enum ([22a38c0](https://github.com/LuanRT/YouTube.js/commit/22a38c0762499de74f0aeb3ef01332f893518b08))
+* **VideoInfo:** support iOS client ([#467](https://github.com/LuanRT/YouTube.js/issues/467)) ([46fe18b](https://github.com/LuanRT/YouTube.js/commit/46fe18b763e0c943b24ea10fdf25456ab9ade709))
+
+
+### Bug Fixes
+
+* **Format:** Extracting audio language from captions ([#470](https://github.com/LuanRT/YouTube.js/issues/470)) ([31d27b1](https://github.com/LuanRT/YouTube.js/commit/31d27b1bca489ee0053d2783f1a956609845a901))
+* **parser:** Allow any property in the `RawResponse` interface ([3bc53a8](https://github.com/LuanRT/YouTube.js/commit/3bc53a8c12e65b22f19a3e337641196b692a94db))
+* **parser:** Logger logging `classdata` as `[Object object]` ([bf1510b](https://github.com/LuanRT/YouTube.js/commit/bf1510b235e3ee7d13d51f092babd1105c3d6b9f))
+* **Playlist:** Only try extracting the subtitle for the first page ([#465](https://github.com/LuanRT/YouTube.js/issues/465)) ([e370116](https://github.com/LuanRT/YouTube.js/commit/e3701160928e9e959b88ca215c6b0a44c70ca6e6))
+* **toDash:** Format grouping into AdaptationSets ([#462](https://github.com/LuanRT/YouTube.js/issues/462)) ([1ff3e1a](https://github.com/LuanRT/YouTube.js/commit/1ff3e1a440389e71055d4b201c29021ca5b39254))
 
 
 ### Performance Improvements
 
-* Cleanup some unnecessary uses of `YTNode#key` and `Maybe` ([#463](https://github.com/jeremyBanks/YouTube.js/issues/463)) ([0dda97e](https://github.com/jeremyBanks/YouTube.js/commit/0dda97e0b03171de52d7f11a5abf78911e74cead))
+* Cleanup some unnecessary uses of `YTNode#key` and `Maybe` ([#463](https://github.com/LuanRT/YouTube.js/issues/463)) ([0dda97e](https://github.com/LuanRT/YouTube.js/commit/0dda97e0b03171de52d7f11a5abf78911e74cead))
+
+
+### Code Refactoring
+
+* replace unnecessary classes with pure functions ([#468](https://github.com/LuanRT/YouTube.js/issues/468)) ([87ed396](https://github.com/LuanRT/YouTube.js/commit/87ed3960ffa1c738b6f3b5acaf423647db4d367e))
 
 ## [5.8.0](https://github.com/LuanRT/YouTube.js/compare/v5.7.1...v5.8.0) (2023-07-30)
 

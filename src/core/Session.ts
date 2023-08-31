@@ -3,7 +3,7 @@ import EventEmitterLike from '../utils/EventEmitterLike.js';
 import Actions from './Actions.js';
 import Player from './Player.js';
 
-import Proto from '../proto/index.js';
+import * as Proto from '../proto/index.js';
 import type { ICache } from '../types/Cache.js';
 import type { FetchFunction } from '../types/PlatformShim.js';
 import HTTPClient from '../utils/HTTPClient.js';
@@ -16,6 +16,7 @@ export enum ClientType {
   WEB = 'WEB',
   KIDS = 'WEB_KIDS',
   MUSIC = 'WEB_REMIX',
+  IOS = 'iOS',
   ANDROID = 'ANDROID',
   ANDROID_MUSIC = 'ANDROID_MUSIC',
   ANDROID_CREATOR = 'ANDROID_CREATOR',
@@ -223,10 +224,17 @@ export default class Session extends EventEmitterLike {
   ) {
     let session_data: SessionData;
 
+    const session_args = { lang, location, time_zone: tz, device_category, client_name, enable_safety_mode, visitor_data };
+
     if (generate_session_locally) {
-      session_data = this.#generateSessionData({ lang, location, time_zone: tz, device_category, client_name, enable_safety_mode, visitor_data, on_behalf_of_user });
+      session_data = this.#generateSessionData(session_args);
     } else {
-      session_data = await this.#retrieveSessionData({ lang, location, time_zone: tz, device_category, client_name, enable_safety_mode, visitor_data, on_behalf_of_user }, fetch);
+      try {
+        // This can fail if the data changes or the request is blocked for some reason.
+        session_data = await this.#retrieveSessionData(session_args, fetch);
+      } catch (err) {
+        session_data = this.#generateSessionData(session_args);
+      }
     }
 
     return { ...session_data, account_index };

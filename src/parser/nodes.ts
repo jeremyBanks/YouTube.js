@@ -8,6 +8,7 @@ export { default as AccountSectionList } from './classes/AccountSectionList.js';
 export { default as AppendContinuationItemsAction } from './classes/actions/AppendContinuationItemsAction.js';
 export { default as OpenPopupAction } from './classes/actions/OpenPopupAction.js';
 export { default as Alert } from './classes/Alert.js';
+export { default as AlertWithButton } from './classes/AlertWithButton.js';
 export { default as AnalyticsMainAppKeyMetrics } from './classes/analytics/AnalyticsMainAppKeyMetrics.js';
 export { default as AnalyticsRoot } from './classes/analytics/AnalyticsRoot.js';
 export { default as AnalyticsShortsCarouselCard } from './classes/analytics/AnalyticsShortsCarouselCard.js';
@@ -36,6 +37,7 @@ export { default as ChannelAboutFullMetadata } from './classes/ChannelAboutFullM
 export { default as ChannelAgeGate } from './classes/ChannelAgeGate.js';
 export { default as ChannelFeaturedContent } from './classes/ChannelFeaturedContent.js';
 export { default as ChannelHeaderLinks } from './classes/ChannelHeaderLinks.js';
+export { default as ChannelHeaderLinksView } from './classes/ChannelHeaderLinksView.js';
 export { default as ChannelMetadata } from './classes/ChannelMetadata.js';
 export { default as ChannelMobileHeader } from './classes/ChannelMobileHeader.js';
 export { default as ChannelOptions } from './classes/ChannelOptions.js';
@@ -67,6 +69,7 @@ export { default as SponsorCommentBadge } from './classes/comments/SponsorCommen
 export { default as CompactChannel } from './classes/CompactChannel.js';
 export { default as CompactLink } from './classes/CompactLink.js';
 export { default as CompactMix } from './classes/CompactMix.js';
+export { default as CompactMovie } from './classes/CompactMovie.js';
 export { default as CompactPlaylist } from './classes/CompactPlaylist.js';
 export { default as CompactStation } from './classes/CompactStation.js';
 export { default as CompactVideo } from './classes/CompactVideo.js';
@@ -223,6 +226,7 @@ export { default as MusicImmersiveHeader } from './classes/MusicImmersiveHeader.
 export { default as MusicInlineBadge } from './classes/MusicInlineBadge.js';
 export { default as MusicItemThumbnailOverlay } from './classes/MusicItemThumbnailOverlay.js';
 export { default as MusicLargeCardItemCarousel } from './classes/MusicLargeCardItemCarousel.js';
+export { default as MusicMultiRowListItem } from './classes/MusicMultiRowListItem.js';
 export { default as MusicNavigationButton } from './classes/MusicNavigationButton.js';
 export { default as MusicPlayButton } from './classes/MusicPlayButton.js';
 export { default as MusicPlaylistShelf } from './classes/MusicPlaylistShelf.js';
