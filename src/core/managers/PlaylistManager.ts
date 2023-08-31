@@ -214,6 +214,10 @@ export default class PlaylistManager {
       playlist_description: description
     });
 
+    const response = await this.#actions.execute(
+      EditPlaylistEndpoint.PATH, EditPlaylistEndpoint.build(payload)
+    );
+
     return {
       playlist_id,
       action_result: response.data.actions
