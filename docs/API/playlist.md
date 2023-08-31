@@ -48,7 +48,7 @@ Adds videos to given playlist.
 
 <a name="removevideos"></a>
 ### removeVideos(playlist_id, video_ids)
-
+  
 Removes videos from given playlist.
 
 **Returns:** `Promise.<{ playlist_id: string; action_result: any[] }>`
