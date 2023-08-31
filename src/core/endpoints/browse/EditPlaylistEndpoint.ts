@@ -15,7 +15,8 @@ export function build(opts: EditPlaylistEndpointOptions): IEditPlaylistRequest {
       ...{
         addedVideoId: action.added_video_id,
         setVideoId: action.set_video_id,
-        movedSetVideoIdPredecessor: action.moved_set_video_id_predecessor
+        movedSetVideoIdPredecessor: action.moved_set_video_id_predecessor,
+        playlistDescription: action.playlist_description
       }
     }))
   };
